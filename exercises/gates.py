@@ -1,5 +1,23 @@
 import numpy as np
 
+def kron(*args):
+    """
+    compute kronecker product for any number of arrays.
+    
+    Parameters
+    ---
+    args list(ndarray): A list of ndarrays (at least two)
+        works the same as `np.kron(a, b)` or `np.kron(a, np.kron(b, np.kron(c, ...)))` 
+    """
+    # for arg in args:
+    #     print(f"{arg = }" )
+    
+    # print()
+    assert len(args) >= 2, "must supply at least two arguments"
+    if len(args) == 2:
+        return np.kron(args[0], args[1])
+    else:
+        return np.kron(args[0], kron(*args[1:]))
 
 """Define quantum logic gates (QLG)"""
 Z = np.array([[1,0],
