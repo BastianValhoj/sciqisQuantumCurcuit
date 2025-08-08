@@ -1,10 +1,17 @@
 [project]
 name = "quantumcurcuit"
 version = "0.1.0"
-description = "Add your description here"
+description = "Working with quantum circuits in DTU course 10387 - Scientific computing in quantum information science"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "ipykernel>=6.30.1",
+    "ipython>=9.4.0",
+    "ipywidgets>=8.1.7",
+    "matplotlib>=3.10.5",
     "numpy>=2.3.2",
+    "qutip>=5.2.0",
+    "qutip-qip>=0.4.1",
+    "seaborn>=0.13.2",
+    "tqdm>=4.67.1",
 ]
